@@ -5,14 +5,15 @@ import cookieParser from 'cookie-parser'
 import fileUpload from 'express-fileupload'
 import cors from 'cors'
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 3000
 
-const start = async function (a, b) {
+const start = async function () {
   try {
-    await db.authenticate()
+    await db.getConnection()
     console.log('Database Connected')
   } catch (e) {
     console.log(e)
