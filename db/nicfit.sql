@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2024 at 06:16 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 19 Jun 2024 pada 19.21
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -39,37 +39,36 @@ CREATE TABLE `user` (
   `refresh_token` text DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `name`, `alamat`, `phone`, `role`, `refresh_token`, `image`, `url`, `createdAt`, `updatedAt`) VALUES
-(1, 'admin', 'admin@admin.com', '$2b$10$5F5d/PbL7qmsW6feCX0h2.pHxKoCuRC6rlJdmKJZ1fadIWomeK5BS', NULL, NULL, NULL, 'user', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOm51bGwsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjpudWxsLCJyb2xlIjoidXNlciIsImltYWdlIjpudWxsLCJ1cmwiOm51bGwsImlhdCI6MTcxODExMDA5NCwiZXhwIjoxNzE4MTk2NDk0fQ.L4gR7VVV5uspndzMaGUf4Jn0Ol08s6bQGaqPozsHsD8', NULL, NULL, '2024-06-05 07:39:54', '2024-06-11 12:48:14'),
-(2, 'user', 'user@user.com', '$2b$10$fn.in8j.2BOcxOYrvgeFg.YG1jcVYNKDr.lIpYSpA63bH8LcZm4We', NULL, NULL, NULL, 'user', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOm51bGwsInVzZXJuYW1lIjoidXNlciIsImVtYWlsIjoidXNlckB1c2VyLmNvbSIsInBob25lIjpudWxsLCJyb2xlIjoidXNlciIsImltYWdlIjpudWxsLCJ1cmwiOm51bGwsImlhdCI6MTcxNzkyMjEwMiwiZXhwIjoxNzE4MDA4NTAyfQ.bGmPlKlDg1MuNvIBCvtr6LiQyLEfJCRwnelNT0_67-o', NULL, NULL, '2024-06-09 06:27:56', '2024-06-09 08:35:02');
+(6, 'deri', 'deri@gmail.com', '$2b$10$fPrdcjm.ohnaDtehLyB8d.appC6XcMWu/PBbrCeOBGe8VittCRiAe', 'derii', 'Surabaya', '0812345', 'user', NULL, 'default.png', 'http://localhost:3000/images/default.png', NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
